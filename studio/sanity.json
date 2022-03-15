@@ -1,0 +1,34 @@
+{
+  "root": true,
+  "project": {
+    "name": "bjh.dev"
+  },
+  "api": {
+    "projectId": "aq6y4tzb",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "asset-source-unsplash",
+    "media-library",
+    "social-preview"
+  ],
+  "env": {
+    "development": {
+      "plugins": ["@sanity/vision"]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./deskStructure.ts"
+    }
+  ]
+}
