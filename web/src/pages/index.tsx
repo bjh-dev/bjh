@@ -125,14 +125,14 @@ const HomePage = ({data}) => {
        </Container>
        <Container>
          <div className="py-8">
-           <h2 className="text-2xl font-black font-serif text-white mb-4">
+           <h2 className="text-2xl font-black mb-4">
              Portfolio
            </h2>
            <ul>
              {portfolios.map((portfolio) => (
                <li key={portfolio.node.id}>
                  <Link
-                   className="text-gray-300 font-serif list-none hover:text-purple-600 ease-in-out duration-200"
+                   className="text-gray-300 list-none hover:text-purple-600 ease-in-out duration-200"
                    to={`/portfolio/${portfolio.node.slug.current}`}
                  >
                    {portfolio.node.title}

@@ -1,24 +1,30 @@
 export default {
-  name: 'page',
-  title: 'Page',
-  type: 'document',
+  name: "page",
+  title: "Page",
+  type: "document",
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
+      name: "title",
+      title: "Title",
+      type: "string",
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
+      name: "slug",
+      title: "Slug",
+      type: "slug",
       options: {
-        source: 'title',
+        source: "title",
         maxLength: 200,
         slugify: (input) =>
-          input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
+          input.toLowerCase().replace(/\s+/g, "-").slice(0, 200),
         validation: (Rule) => Rule.required(),
       },
+    },
+    {
+      name: "excerpt",
+      title: "Excerpt",
+      type: "array",
+      of: [{ type: "block" }],
     },
   ],
 };

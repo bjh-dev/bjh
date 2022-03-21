@@ -20,5 +20,11 @@ export default {
         validation: (Rule) => Rule.required(),
       },
     },
+    {
+      name: "excerpt",
+      title: "Excerpt",
+      type: "array",
+      of: [{ type: "block" }],
+    },
   ],
 };

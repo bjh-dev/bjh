@@ -5,7 +5,11 @@ type TypeChildren = {
   children: Object
 }
 const Layout = ({ children }: TypeChildren) => {
-  return <div className="min-h-screen bg-gray-800 text-gray-200">{children}</div>;
+  return (
+    <div className="min-h-screen bg-gray-800 text-gray-200  font-serif">
+      {children}
+    </div>
+  );
 };
 
 export default Layout
