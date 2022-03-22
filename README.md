@@ -33,8 +33,8 @@ Git started by cloning this repo
 ```
 $ git clone git@github.com:bjh-dev/bjh.dev.git
 $ cd bjh
-$ yarn
-$ yarn start
+$ pnpm i -r
+$ pnpm run dev -r
 ```
 
 To view the project you can open [http://localhost:8000](http://localhost:8000).
@@ -49,7 +49,6 @@ To view the project you can open [http://localhost:8000](http://localhost:8000).
 - [ ] Config [commitlint and husky](https://commitlint.js.org/#/guides-local-setup) for commit linting and convention enforcement in project root.
 - [x] Install and config [Sanity](https://www.sanity.io/docs/getting-started) .
 - [x] Install and config [Gatsby](https://www.gatsbyjs.com/docs/quick-start/) .
-- [x] Config [yarn](https://classic.yarnpkg.com/en/docs/cli/config) in project root.
 - [x] Get a cup of coffee!
 
 ### Second Session
@@ -100,7 +99,7 @@ To view the project you can open [http://localhost:8000](http://localhost:8000).
 ## ⚠️ Requirements
 
 - Node.js 14.15 (LTS) or higher. I recommend Homebrew on Mac's ([install guide](https://brew.sh/))
-- [Yarn 1](https://classic.yarnpkg.com/lang/en/) package manager
+- [pnpm](https://pnpm.io/installation) package manager
 
 ---
 

@@ -1,0 +1,23 @@
+#!/usr/bin/env zx
+// https://github.com/google/zx/issues/124#issuecomment-898469918
+process.env.FORCE_COLOR = 3;
+await $`find . -type d -name node_modules -prune -ok rm -rv {} \\;`;
+await $`find . -type f -name yarn.lock -prune -ok rm -rv {} \\;`;
+await $`find . -type f -name "yarn*log" -prune -ok rm -rv {} \\;`;
+const w = (m) => console.log(chalk.yellow(m));
+const pkg = await fs.readJson("./package.json");
+if (pkg.scripts?.preinstall) {
+  w(
+    `package.json already has 'scripts.preinstall', skipping add 'only-allow pnpm'`
+  );
+} else {
+  pkg.scripts ??= {};
+  pkg.scripts.preinstall = "npx -y only-allow pnpm";
+  await fs.writeJson("./package.json", pkg, { spaces: 2 });
+}
+const refs =
+  await $`grep --exclude-dir={node_modules,.git,dist} -rl "yarn" . | tee /dev/tty || true`;
+if (refs.stdout) {
+  w("Found reference to yarn, better check them out.");
+}
+await $`pnpm i`;
