@@ -18,6 +18,7 @@ module.exports = {
         overlayDrafts: true,
       },
     },
+    "gatsby-plugin-pnpm",
     "gatsby-plugin-postcss",
     "gatsby-plugin-netlify",
     "gatsby-plugin-image",
