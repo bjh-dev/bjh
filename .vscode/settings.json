@@ -1,3 +1,4 @@
 {
-  "eslint.workingDirectories": ["./web", "./studio"]
+  "eslint.workingDirectories": ["./web", "./studio"],
+  "cSpell.words": ["headlessui", "Popover"]
 }

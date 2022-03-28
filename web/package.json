@@ -3,82 +3,72 @@
   "version": "1.0.0",
   "private": true,
   "description": "bjh.dev",
-  "author": "Bryan Hickey",
+  "author": "Bryan Hickey <bjh@bjh.dev>",
   "keywords": [
     "gatsby"
   ],
   "scripts": {
-    "dev": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit",
-    "preinstall": "npx -y only-allow pnpm"
+    "type-check": "tsc",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
+    "test": "jest"
   },
   "dependencies": {
-    "@portabletext/react": "^1.0.4",
-    "@portabletext/toolkit": "^1.0.5",
-    "@portabletext/types": "^1.0.3",
-    "dotenv": "^16.0.0",
-    "gatsby": "^4.10.1",
-    "gatsby-plugin-image": "^2.9.1",
-    "gatsby-plugin-manifest": "^4.9.1",
-    "gatsby-plugin-netlify": "^4.1.0",
-    "gatsby-plugin-pnpm": "^1.2.10",
-    "gatsby-plugin-react-helmet": "^5.9.0",
-    "gatsby-plugin-sharp": "^4.9.1",
-    "gatsby-plugin-sitemap": "^5.9.0",
-    "gatsby-source-filesystem": "^4.9.1",
-    "gatsby-source-sanity": "^7.3.2",
-    "gatsby-transformer-sharp": "^4.9.0",
+    "@headlessui/react": "1.5.0",
+    "@heroicons/react": "1.0.6",
+    "@portabletext/react": "1.0.4",
+    "gatsby": "4.10.3",
+    "gatsby-plugin-image": "2.10.1",
+    "gatsby-plugin-sharp": "4.10.2",
+    "gatsby-source-filesystem": "4.10.1",
+    "gatsby-transformer-sharp": "4.10.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "tsconfig-paths-webpack-plugin": "3.5.2"
   },
   "devDependencies": {
+    "@babel/preset-react": "7.16.7",
+    "@babel/preset-typescript": "7.16.7",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/line-clamp": "^0.3.1",
     "@tailwindcss/typography": "^0.5.2",
-    "@types/node": "^17.0.21",
-    "@types/react": "^17.0.40",
-    "@types/react-dom": "^17.0.13",
-    "@typescript-eslint/eslint-plugin": "^5.15.0",
-    "@typescript-eslint/parser": "^5.15.0",
+    "@testing-library/dom": "8.12.0",
+    "@testing-library/jest-dom": "5.16.3",
+    "@testing-library/react": "12.1.4",
+    "@testing-library/react-hooks": "7.0.2",
+    "@types/jest": "27.4.1",
+    "@types/node": "17.0.23",
+    "@types/react": "17.0.43",
+    "@types/react-dom": "17.0.14",
+    "@typescript-eslint/eslint-plugin": "5.17.0",
+    "@typescript-eslint/parser": "5.17.0",
     "autoprefixer": "^10.4.3",
-    "eslint": "^8.11.0",
-    "eslint-config-prettier": "^8.5.0",
+    "babel-jest": "27.5.1",
+    "babel-preset-gatsby": "2.10.1",
+    "eslint": "8.12.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "8.5.0",
     "eslint-config-sanity": "^5.1.0",
-    "eslint-plugin-react": "^7.29.4",
+    "eslint-import-resolver-typescript": "2.7.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-jest": "26.1.3",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-react-hooks": "4.3.0",
     "gatsby-plugin-postcss": "^5.9.0",
+    "husky": "7.0.4",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "27.5.1",
     "postcss": "^8.4.11",
-    "prettier": "^2.5.1",
+    "prettier": "2.6.1",
     "tailwindcss": "^3.0.23",
-    "typescript": "^4.6.2"
-  },
-  "prettier": {
-    "semi": false,
-    "printWidth": 100,
-    "bracketSpacing": false,
-    "singleQuote": true
-  },
-  "eslintConfig": {
-    "parserOptions": {
-      "ecmaVersion": 9,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "modules": true
-      }
-    },
-    "extends": [
-      "sanity",
-      "sanity/react",
-      "sanity/typescript",
-      "prettier"
-    ],
-    "ignorePatterns": [
-      "lib/**/"
-    ]
+    "ts-jest": "27.1.4",
+    "typescript": "4.6.3"
   }
 }

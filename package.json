@@ -3,17 +3,41 @@
   "version": "1.0.0",
   "description": "A website project built with Sanity and Gatsby using typescript",
   "repository": "git@github.com:bjh-dev/bjh.git",
-  "author": "Bryan Hickey <bryanjhickey@users.noreply.github.com>",
+  "author": "Bryan Hickey <bjh@bjh.dev>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "preinstall": "npx -y only-allow pnpm",
-    "build": "pnpm run build --r",
-    "dev": "pnpm run dev --r",
-    "format": "pnpm run format",
-    "build-studio": "(cd studio && npm run build)",
-    "build-web": "pnpm bootstrap && (cd studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN npm run graphql-deploy) && (cd web && npm run build)",
-    "graphql-deploy": "pnpm run graphql-deploy",
-    "lint": "pnpm run lint"
+    "build": "lerna run build --parallel",
+    "dev": "lerna run dev --parallel",
+    "format": "lerna run format",
+    "build-studio": "(cd studio && yarn build)",
+    "build-web": "lerna bootstrap && (cd studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN yarn graphql-deploy) && (cd web && yarn build)",
+    "graphql-deploy": "lerna run graphql-deploy",
+    "lint": "cd web && yarn lint",
+    "postinstall": "husky install",
+    "commit": "cz"
+  },
+  "lint-staged": {
+    "./web/src/**/*.{ts,js,jsx,tsx}": [
+      "yarn lint --fix",
+      "yarn format"
+    ]
+  },
+  "dependencies": {
+    "@sanity/cli": "^2.28.0",
+    "lerna": "^4.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }

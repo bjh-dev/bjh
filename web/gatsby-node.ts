@@ -1,4 +1,12 @@
+const TsconfigPathsPlugin = require(`tsconfig-paths-webpack-plugin`);
 
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      plugins: [new TsconfigPathsPlugin()],
+    },
+  });
+};
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -67,7 +75,7 @@ async function createAllPages(graphql, actions) {
     const path = `/posts/${slug.current}/`;
     createPage({
       path,
-      component: require.resolve("./src/templates/post.tsx"),
+      component: require.resolve(`./src/templates/post.tsx`),
       context: { id },
     });
   });
@@ -77,7 +85,7 @@ async function createAllPages(graphql, actions) {
     const path = `/${slug.current}/`;
     createPage({
       path,
-      component: require.resolve("./src/templates/page.tsx"),
+      component: require.resolve(`./src/templates/page.tsx`),
       context: { id },
     });
   });
@@ -87,7 +95,7 @@ async function createAllPages(graphql, actions) {
     const path = `/services/${slug.current}/`;
     createPage({
       path,
-      component: require.resolve("./src/templates/service.tsx"),
+      component: require.resolve(`./src/templates/service.tsx`),
       context: { id },
     });
   });
@@ -96,7 +104,7 @@ async function createAllPages(graphql, actions) {
     const path = `/portfolio/${slug.current}/`;
     createPage({
       path,
-      component: require.resolve("./src/templates/portfolio.tsx"),
+      component: require.resolve(`./src/templates/portfolio.tsx`),
       context: { id },
     });
   });

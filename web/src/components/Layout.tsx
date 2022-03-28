@@ -1,15 +1,14 @@
 import * as React from 'react';
-import '../assets/styles/global.css';
+import '@/assets/styles/global.css';
+import PrimaryNav from '@/components/PrimaryNav';
 
-type TypeChildren = {
-  children: Object
-}
-const Layout = ({ children }: TypeChildren) => {
+function Layout({ children }) {
   return (
     <div className="min-h-screen bg-gray-800 text-gray-200  font-serif">
+      <PrimaryNav />
       {children}
     </div>
   );
-};
+}
 
-export default Layout
+export default Layout;
