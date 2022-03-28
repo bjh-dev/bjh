@@ -9,7 +9,7 @@
   "scripts": {
     "build": "lerna run build --parallel",
     "dev": "lerna run dev --parallel",
-    "format": "lerna run format",
+    "format": "cd web && yarn format",
     "build-studio": "(cd studio && yarn build)",
     "build-web": "lerna bootstrap && (cd studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN yarn graphql-deploy) && (cd web && yarn build)",
     "graphql-deploy": "lerna run graphql-deploy",
