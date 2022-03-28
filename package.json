@@ -21,6 +21,10 @@
     "./web/src/**/*.{ts,js,jsx,tsx}": [
       "yarn lint --fix",
       "yarn format"
+    ],
+    "./web/src/gatsby-*.{ts,js,jsx,tsx}": [
+      "yarn lint --fix",
+      "yarn format"
     ]
   },
   "dependencies": {
