@@ -1,5 +1,11 @@
 # A new website built with Gatsby and Sanity
 
+## Gatsby site
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c5b79239-cef1-47a4-97aa-9cb05e97e879/deploy-status)](https://app.netlify.com/sites/suspicious-shannon-cda0b2/deploys)
+
+## Sanity Studio
+
 ## 🦅 Overview
 
 This is a website built with [Gatsby](https://www.gatsbyjs.com/) and [Sanity](https://www.sanity.io/), using [TypeScript](https://www.typescriptlang.org/) wherever possible.
