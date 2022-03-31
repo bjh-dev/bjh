@@ -26,6 +26,28 @@ const config: GatsbyConfig = {
     `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,
     {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://dev.bjh.dev`,
+        sitemap: `https://dev.bjh.dev/sitemap.xml`,
+        resolveEnv: () => process.env.GATSBY_ENV,
+        env: {
+          development: {
+            host: `http://localhost:8000/`,
+            policy: [{ userAgent: `*`, disallow: [`/`] }],
+          },
+          staging: {
+            host: `http://dev.bjh.dev/`,
+            policy: [{ userAgent: `*`, disallow: `/` }],
+          },
+          production: {
+            host: `http://dev.bjh.dev/`,
+            policy: [{ userAgent: `*`, disallow: `/` }],
+          },
+        },
+      },
+    },
+    {
       resolve: `gatsby-transformer-sharp`,
       options: {
         placeholder: `blurred`,
