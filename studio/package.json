@@ -40,5 +40,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:bjh-dev/bjh.git"
+  },
+  "resolutions": {
+    "glob-parent": "^5.1.2"
   }
 }
