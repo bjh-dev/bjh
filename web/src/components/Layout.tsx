@@ -4,7 +4,7 @@ import PrimaryNav from '@/components/PrimaryNav';
 
 function Layout({ children }) {
   return (
-    <div className="min-h-screen bg-gray-800 text-gray-200  font-serif">
+    <div className="dark min-h-screen font-serif">
       <PrimaryNav />
       {children}
     </div>

@@ -1,9 +1,13 @@
 /** @type {import('gatsby').GatsbyConfig} */
-require(`dotenv`).config({
+import type { GatsbyConfig } from 'gatsby';
+import path from 'path';
+import dotenv from 'dotenv';
+
+dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl: `https://localhost:8000`,
   },
@@ -21,12 +25,18 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        placeholder: `blurred`,
+        backgroundColor: `transparent`,
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/assets/images`,
+        path: path.resolve(`./src/assets/images`),
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -34,18 +44,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: `src/images/icon.png`,
+        icon: path.resolve(`src/images/icon.png`),
       },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `./src/images/`,
-      },
-      __key: `images`,
-    },
   ],
 };
+
+export default config;

@@ -1,17 +1,14 @@
+import path from 'path';
+
 const TsconfigPathsPlugin = require(`tsconfig-paths-webpack-plugin`);
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+export const onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       plugins: [new TsconfigPathsPlugin()],
     },
   });
 };
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
 
 async function createAllPages(graphql, actions) {
   const { createPage } = actions;
@@ -63,8 +60,8 @@ async function createAllPages(graphql, actions) {
       }
     }
   `);
-  if (result.errors) throw result.errors;
 
+  if (result.errors) throw result.errors;
   const postEdges = (result.data.allSanityPost || {}).edges || [];
   const pageEdges = (result.data.allSanityPage || {}).edges || [];
   const serviceEdges = (result.data.allSanityService || {}).edges || [];
@@ -72,44 +69,48 @@ async function createAllPages(graphql, actions) {
 
   postEdges.forEach((edge) => {
     const { id, slug = {} } = edge.node;
-    const path = `/posts/${slug.current}/`;
+    const slugPath = `/posts/${slug.current}/`;
+    const template = path.resolve(`./src/templates/post.tsx`);
     createPage({
-      path,
-      component: require.resolve(`./src/templates/post.tsx`),
+      path: slugPath,
+      component: template,
       context: { id },
     });
   });
 
   pageEdges.forEach((edge) => {
     const { id, slug = {} } = edge.node;
-    const path = `/${slug.current}/`;
+    const slugPath = `/${slug.current}/`;
+    const template = path.resolve(`./src/templates/page.tsx`);
     createPage({
-      path,
-      component: require.resolve(`./src/templates/page.tsx`),
+      path: slugPath,
+      component: template,
       context: { id },
     });
   });
 
   serviceEdges.forEach((edge) => {
     const { id, slug = {} } = edge.node;
-    const path = `/services/${slug.current}/`;
+    const slugPath = `/services/${slug.current}/`;
+    const template = path.resolve(`./src/templates/service.tsx`);
     createPage({
-      path,
-      component: require.resolve(`./src/templates/service.tsx`),
+      path: slugPath,
+      component: template,
       context: { id },
     });
   });
   portfolioEdges.forEach((edge) => {
     const { id, slug = {} } = edge.node;
-    const path = `/portfolio/${slug.current}/`;
+    const slugPath = `/portfolio/${slug.current}/`;
+    const template = path.resolve(`./src/templates/portfolio.tsx`);
     createPage({
-      path,
-      component: require.resolve(`./src/templates/portfolio.tsx`),
+      path: slugPath,
+      component: template,
       context: { id },
     });
   });
 }
 
-exports.createPages = async ({ graphql, actions }) => {
+export const createPages = async ({ graphql, actions }) => {
   await createAllPages(graphql, actions);
 };
