@@ -81,7 +81,7 @@
   },
   "resolutions": {
     "immer": "^9.0.6",
-    "minimist": "^1.2.6",
+    "cz-conventional-changelog/commitizen/minimist": "^1.2.6",
     "ansi-html": "^0.0.8",
     "node-fetch": "^2.6.7"
   }
