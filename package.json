@@ -44,5 +44,8 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "resolutions": {
+    "cz-conventional-changelog/commitizen/minimist": "^1.2.6"
   }
 }
