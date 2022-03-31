@@ -4,9 +4,9 @@
 
 This is a website built with [Gatsby](https://www.gatsbyjs.com/) and [Sanity](https://www.sanity.io/), using [TypeScript](https://www.typescriptlang.org/) wherever possible.
 
-Some of the things this project will be using or plans to use are:
+Some of the things this project uses or plans to use are:
 
-Planned
+**Planned:**
 
 - 🐶 Husky (project wide) — Use git hooks with ease
 - 📄 Commitizen (project wide) - Conventional commit messages CLI
@@ -17,12 +17,12 @@ Planned
 - 💖 Prettier (Gatsby and Sanity independently) - Opinionated Code Formatter
 - 🐐 Tests (Gatsby only, I think) - Jest and Testing Library
 
-Unknown Implementation Date
+**Unknown Implementation Date:**
 
 - 🖌 Renovate (Gatsby and Sanity independently) - Dependency update tool
 - 👷 PR Workflow (project wide) - Run Type Check & Linters on pull requests
 
-## 🚀 Quickstart Guide (when we have the project started)
+## 🚀 Quickstart Guide
 
 Git started by cloning this repo
 
@@ -33,7 +33,9 @@ $ yarn
 $ yarn dev
 ```
 
-To view the project you can open [http://localhost:8000](http://localhost:8000).
+To view the Gatsby site, open [http://localhost:8000](http://localhost:8000).
+To view the GraphQL site, open [http://localhost:8000](http://localhost:8000/__graphql).
+To view the Sanity Studio, open [http://localhost:8000](http://localhost:3333).
 
 ## ✅ TODOs for New Website
 
