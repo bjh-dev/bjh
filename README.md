@@ -1,5 +1,7 @@
 # A new website built with Gatsby and Sanity
 
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+
 ## Gatsby site
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c5b79239-cef1-47a4-97aa-9cb05e97e879/deploy-status)](https://app.netlify.com/sites/suspicious-shannon-cda0b2/deploys)

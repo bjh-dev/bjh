@@ -7,9 +7,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "lerna run build --parallel",
-    "dev": "lerna run dev --parallel",
-    "clean": "lerna run clean --parallel",
+    "build": "lerna run build --npm-client=yarn --parallel",
+    "dev": "lerna run dev --npm-client=yarn --parallel",
+    "clean": "lerna run clean && lerna clean  --parallel --npm-client=yarn",
     "format": "cd web && yarn format",
     "build-studio": "(cd studio && yarn build)",
     "build-web": "lerna bootstrap && (cd studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN yarn graphql-deploy) && (cd web && yarn build)",

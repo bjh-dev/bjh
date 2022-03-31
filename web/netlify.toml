@@ -1,6 +1,6 @@
 [build]
     command = "gatsby build"
-    publish = "public"
+    publish = "/web/public"
 [dev]
     command = "gatsby develop"
 
