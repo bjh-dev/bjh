@@ -1,5 +1,10 @@
 {
   "packages": ["web", "studio"],
   "npmClient": "yarn",
-  "version": "0.2.0"
+  "version": "0.2.0",
+  "command": {
+    "run": {
+      "npmClient": "yarn"
+    }
+  }
 }
