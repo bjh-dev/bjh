@@ -1,15 +1,9 @@
 [build]
-    command = "gatsby build"
-    publish = "public"
+    command = "sanity build"
+    publish = "/"
 [dev]
-    command = "gatsby develop"
+    command = "sanity start"
 
-[[plugins]]
-  # Installs the Lighthouse Build Plugin for all deploy contexts
-  package = "@netlify/plugin-lighthouse"
-
- [plugins.inputs]
-    output_path = "reports/lighthouse.html"
 [[headers]]
   for = "/*"
   [headers.values]
