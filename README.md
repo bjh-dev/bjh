@@ -33,36 +33,13 @@ Git started by cloning this repo
 ```
 $ git clone git@github.com:bjh-dev/bjh.dev.git
 $ cd bjh
-$ pnpm i -r
-$ pnpm run dev -r
+$ yarn
+$ yarn dev
 ```
 
 To view the project you can open [http://localhost:8000](http://localhost:8000).
 
 ## ✅ TODOs for New Website
-
-### First Session
-
-- [x] Create monorepo for project `$ mkdir bjh`.
-- [x] Config initialise Git, add monorepo and push to remote.
-- [x] Publish link to repo on socials for those interested.
-- [ ] Config [commitlint and husky](https://commitlint.js.org/#/guides-local-setup) for commit linting and convention enforcement in project root.
-- [x] Install and config [Sanity](https://www.sanity.io/docs/getting-started) .
-- [x] Install and config [Gatsby](https://www.gatsbyjs.com/docs/quick-start/) .
-- [x] Get a cup of coffee!
-
-### Second Session
-
-- [x] Refresher on Headless CMS and Static Site Generators.
-- [x] Quick tour of sanity.
-- [x] Create sanity objects schemas.
-- [x] Create sanity document schemas
-
-### Third Session
-
-- [ ] Configure Gatsby plugins
-- [ ] Create our first Graphql query and display data to font end.
-- [ ] Review Sanity schemas for feature completeness and optimisation.
 
 ## Sanity Config Planning
 
@@ -94,12 +71,9 @@ To view the project you can open [http://localhost:8000](http://localhost:8000).
 
 - 🔌 Plugs ??
 
-**TypeScript in Sanity?**
-
 ## ⚠️ Requirements
 
 - Node.js 14.15 (LTS) or higher. I recommend Homebrew on Mac's ([install guide](https://brew.sh/))
-- [pnpm](https://pnpm.io/installation) package manager
 
 ---
 
