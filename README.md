@@ -34,7 +34,9 @@ $ yarn dev
 ```
 
 To view the Gatsby site, open [http://localhost:8000](http://localhost:8000).
+
 To view the GraphQL site, open [http://localhost:8000](http://localhost:8000/__graphql).
+
 To view the Sanity Studio, open [http://localhost:8000](http://localhost:3333).
 
 ## ✅ TODOs for New Website
