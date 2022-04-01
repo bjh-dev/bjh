@@ -1,5 +1,5 @@
 [build]
-    base = "web"
+    base = "/"
     command = "yarn build"
     publish = "public"
 [dev]
