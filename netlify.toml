@@ -1,7 +1,7 @@
 [build]
-    base = "/"
+    base = "web/"
+    publish = "public/"
     command = "yarn build"
-    publish = "public"
 [dev]
     command = "gatsby develop"
 
