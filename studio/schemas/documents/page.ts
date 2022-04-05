@@ -26,5 +26,10 @@ export default {
       type: "array",
       of: [{ type: "block" }],
     },
+    {
+      name: "body",
+      title: "body",
+      type: "bodyPortableText",
+    },
   ],
 };

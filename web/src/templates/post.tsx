@@ -1,8 +1,8 @@
 import { graphql, Link } from 'gatsby';
 import * as React from 'react';
-import Layout from '../components/Layout';
-import Container from '../components/Container';
-import ExcerptPT from '../components/ExcerptPT';
+import Layout from '@/components/Layout';
+import Container from '@/components/Container';
+import ExcerptPortableText from '@/components/ExcerptPortableText';
 
 export const query = graphql`
   query postTemplateQuery($id: String!) {
@@ -22,7 +22,7 @@ const postTemplate = (props) => {
   return (
     <Layout>
       <Container>
-        <Link to="/" className="text-white text-sm underline">
+        <Link to="/" className=" text-sm underline">
           &larr; Back
         </Link>
         {post && (
@@ -30,7 +30,9 @@ const postTemplate = (props) => {
             <h1 className="text-4xl font-black text-center pt-36 pb-16">
               {post.title}
             </h1>
-            {post._rawExcerpt && <ExcerptPT RawExcerpt={post._rawExcerpt} />}
+            {post._rawExcerpt && (
+              <ExcerptPortableText RawExcerpt={post._rawExcerpt} />
+            )}
           </article>
         )}
 

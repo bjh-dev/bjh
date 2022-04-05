@@ -10,6 +10,8 @@ import service from './documents/service';
 import siteSettings from './documents/siteSettings';
 import portfolio from './documents/portfolio';
 // Import Object type schemas
+import bodyPortableText from './objects/bodyPortableText';
+import mainImage from './objects/mainImage';
 import seo from './objects/seo';
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -26,6 +28,8 @@ export default createSchema({
     siteSettings,
     portfolio,
     /* Objects */
+    bodyPortableText,
+    mainImage,
     seo,
   ]),
 });

@@ -1,7 +1,7 @@
 import { PortableText } from '@portabletext/react';
 import * as React from 'react';
 
-const PortableTextExcerpt = {
+const ExcerptPortableTextComponent = {
   marks: {
     link: ({ children, value }) => {
       const rel = !value.href.startsWith(`/`)
@@ -20,8 +20,13 @@ const PortableTextExcerpt = {
   },
 };
 
-function ExcerptPT({ RawExcerpt }) {
-  return <PortableText value={RawExcerpt} components={PortableTextExcerpt} />;
+function ExcerptPortableText({ RawExcerpt }) {
+  return (
+    <PortableText
+      value={RawExcerpt}
+      components={ExcerptPortableTextComponent}
+    />
+  );
 }
 
-export default ExcerptPT;
+export default ExcerptPortableText;

@@ -14,11 +14,14 @@
     "@sanity/desk-tool",
     "asset-source-unsplash",
     "media-library",
-    "social-preview"
+    "social-preview",
+    "@sanity/code-input"
   ],
   "env": {
     "development": {
-      "plugins": ["@sanity/vision"]
+      "plugins": [
+        "@sanity/vision"
+      ]
     }
   },
   "parts": [

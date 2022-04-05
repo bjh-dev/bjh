@@ -16,10 +16,19 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-sanity`,
       options: {
         projectId: process.env.SANITY_PROJECT_ID,
-        dataset: process.env.SANITY_PROJECT,
+        dataset: process.env.SANITY_DATASET,
         token: process.env.SANITY_TOKEN,
         watchMode: process.env.SANITY_WATCHMODE || false,
         overlayDrafts: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sanity-image`,
+      options: {
+        // Sanity project info (required)
+        projectId: process.env.SANITY_PROJECT_ID,
+        dataset: process.env.SANITY_DATASET,
+        customImageTypes: [`SanityMainImage`],
       },
     },
     `gatsby-plugin-postcss`,
