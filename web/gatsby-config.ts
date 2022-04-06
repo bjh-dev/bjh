@@ -23,6 +23,12 @@ const config: GatsbyConfig = {
       },
     },
     {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        useAutoGen: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-sanity-image`,
       options: {
         // Sanity project info (required)

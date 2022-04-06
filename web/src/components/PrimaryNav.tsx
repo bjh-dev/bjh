@@ -103,7 +103,7 @@ function PrimaryNav() {
               </Link>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
-              <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-white hover:text-purple-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-600">
+              <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-600 hover:text-purple-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-600">
                 <span className="sr-only">Open menu</span>
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -115,14 +115,14 @@ function PrimaryNav() {
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? `text-purple-600` : `text-white`,
-                          `group rounded-md inline-flex items-center text-base font-medium hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600`,
+                          open ? `text-purple-600` : `text-gray-800`,
+                          `group rounded-md inline-flex items-center text-base font-bold hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600`,
                         )}
                       >
                         <span>Services</span>
                         <ChevronDownIcon
                           className={classNames(
-                            open ? `text-purple-600` : `text-white`,
+                            open ? `text-purple-600` : `text-gray-600`,
                             `ml-2 h-5 w-5 group-hover:text-purple-600`,
                           )}
                           aria-hidden="true"
@@ -138,14 +138,14 @@ function PrimaryNav() {
                         leaveFrom="opacity-100 translate-y-0"
                         leaveTo="opacity-0 -translate-y-1"
                       >
-                        <Popover.Panel className="hidden bg-gray-800 md:block absolute z-10 top-full inset-x-0 transform shadow-xl">
+                        <Popover.Panel className="hidden bg-gray-100 md:block absolute z-10 top-full inset-x-0 transform shadow-xl">
                           <Container>
                             <div className="mx-auto grid gap-y-6 py-6 sm:grid-cols-2 sm:gap-8 sm:py-8 lg:grid-cols-3 lg:py-12 xl:py-16">
                               {services.map((item) => (
                                 <a
                                   key={item.name}
                                   href={item.href}
-                                  className="group -m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-700"
+                                  className="group -m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-200"
                                 >
                                   <div className="flex md:h-full lg:flex-col">
                                     <div className="flex-shrink-0">
@@ -158,14 +158,14 @@ function PrimaryNav() {
                                     </div>
                                     <div className="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4">
                                       <div>
-                                        <p className="text-base font-medium text-white">
+                                        <p className="text-base font-bold text-gray-800">
                                           {item.name}
                                         </p>
-                                        <p className="mt-1 text-sm text-gray-500 group-hover:text-gray-300">
+                                        <p className="mt-1 text-sm text-gray-600">
                                           {item.description}
                                         </p>
                                       </div>
-                                      <p className="mt-2 text-sm font-medium text-purple-600 group-hover:text-orange-400 group-hover:underline lg:mt-4">
+                                      <p className="mt-2 text-sm font-bold text-purple-600 group-hover:text-orange-400 group-hover:underline lg:mt-4">
                                         Learn more{` `}
                                         <span aria-hidden="true">&rarr;</span>
                                       </p>
@@ -182,7 +182,7 @@ function PrimaryNav() {
                                   <div key={item.name} className="flow-root">
                                     <a
                                       href={item.href}
-                                      className="-m-3 p-3 flex items-center text-base font-medium text-gray-800 hover:text-orange-400"
+                                      className="-m-3 p-3 flex items-center text-base font-bold text-gray-800 hover:text-orange-400"
                                     >
                                       <item.icon
                                         className="flex-shrink-0 h-6 w-6"
@@ -202,13 +202,13 @@ function PrimaryNav() {
                 </Popover>
                 <Link
                   to="/"
-                  className="text-base font-medium text-white hover:text-purple-600"
+                  className="text-base font-bold text-gray-800 hover:text-purple-600"
                 >
                   Recent Work
                 </Link>
                 <a
                   href="/"
-                  className="text-base font-medium text-white hover:text-purple-600"
+                  className="text-base font-bold text-gray-800 hover:text-purple-600"
                 >
                   Why Us?
                 </a>
@@ -217,14 +217,14 @@ function PrimaryNav() {
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? `text-purple-600` : `text-white`,
-                          `group  rounded-md inline-flex items-center text-base font-medium hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600`,
+                          open ? `text-purple-600` : `text-gray-800`,
+                          `group  rounded-md inline-flex items-center text-base font-bold hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600`,
                         )}
                       >
                         <span>More</span>
                         <ChevronDownIcon
                           className={classNames(
-                            open ? `text-purple-600` : `text-white`,
+                            open ? `text-purple-600` : `text-gray-800`,
                             `ml-2 h-5 w-5 group-hover:text-purple-600`,
                           )}
                           aria-hidden="true"
@@ -240,12 +240,12 @@ function PrimaryNav() {
                         leaveFrom="opacity-100 translate-y-0"
                         leaveTo="opacity-0 -translate-y-1"
                       >
-                        <Popover.Panel className="hidden bg-gray-800 md:block absolute z-10 top-full inset-x-0 transform shadow-lg">
+                        <Popover.Panel className="hidden bg-gray-100 md:block absolute z-10 top-full inset-x-0 transform shadow-lg">
                           <Container>
                             <div className="relative mx-auto grid grid-cols-1 lg:grid-cols-2">
                               <nav className="grid gap-y-10 py-8 sm:grid-cols-2 sm:gap-x-8 sm:py-12 xl:pr-12">
                                 <div>
-                                  <h3 className="text-base font-medium tracking-wide text-orange-400">
+                                  <h3 className="text-base font-bold tracking-wide text-orange-600">
                                     Company
                                   </h3>
                                   <ul className="mt-5 space-y-6">
@@ -253,7 +253,7 @@ function PrimaryNav() {
                                       <li key={item.name} className="flow-root">
                                         <a
                                           href={item.href}
-                                          className="-m-3 p-3 flex items-center text-base font-medium text-white hover:text-purple-600"
+                                          className="-m-3 p-3 flex items-center text-base font-bold text-gray-800 hover:text-purple-600"
                                         >
                                           <item.icon
                                             className="flex-shrink-0 h-6 w-6"
@@ -268,7 +268,7 @@ function PrimaryNav() {
                                   </ul>
                                 </div>
                                 <div>
-                                  <h3 className="text-base font-medium tracking-wide text-orange-400">
+                                  <h3 className="text-base font-bold tracking-wide text-orange-600">
                                     Resources
                                   </h3>
                                   <ul className="mt-5 space-y-6">
@@ -276,7 +276,7 @@ function PrimaryNav() {
                                       <li key={item.name} className="flow-root">
                                         <a
                                           href={item.href}
-                                          className="-m-3 p-3 flex items-center text-base font-medium text-white hover:text-purple-600"
+                                          className="-m-3 p-3 flex items-center text-base font-bold text-gray-800 hover:text-purple-600"
                                         >
                                           <item.icon
                                             className="flex-shrink-0 h-6 w-6"
@@ -293,7 +293,7 @@ function PrimaryNav() {
                               </nav>
                               <div className="px-4 py-8 sm:py-12 sm:px-6 lg:px-8 xl:pl-12">
                                 <div>
-                                  <h3 className="text-base font-medium tracking-wide text-orange-400">
+                                  <h3 className="text-base font-bold tracking-wide text-orange-600">
                                     From the blog
                                   </h3>
                                   <ul className="mt-6 space-y-6">
@@ -301,7 +301,7 @@ function PrimaryNav() {
                                       <li key={post.id} className="flow-root">
                                         <a
                                           href={post.href}
-                                          className="group -m-3 p-3 flex rounded-lg hover:bg-gray-700"
+                                          className="group -m-3 p-3 flex rounded-lg hover:bg-gray-200"
                                         >
                                           <div className="hidden sm:block flex-shrink-0">
                                             <img
@@ -311,12 +311,12 @@ function PrimaryNav() {
                                             />
                                           </div>
                                           <div className="w-0 flex-1 sm:ml-8">
-                                            <h4 className="text-base font-medium text-white group-hover:text-orange-400 truncate">
+                                            <h4 className="-mt-2 text-base font-bold text-gray-800 group-hover:text-orange-400 truncate">
                                               <span className="border-b-2 border-gray-800 group-hover:border-orange-400">
                                                 {post.name}
                                               </span>
                                             </h4>
-                                            <p className="mt-1 text-sm text-gray-500 group-hover:text-gray-300">
+                                            <p className="mt-1 text-sm text-gray-500">
                                               {post.preview}
                                             </p>
                                           </div>
@@ -325,10 +325,10 @@ function PrimaryNav() {
                                     ))}
                                   </ul>
                                 </div>
-                                <div className="mt-6 text-sm font-medium">
+                                <div className="mt-6 text-sm font-bold">
                                   <a
                                     href="/"
-                                    className="text-orange-400 hover:text-white"
+                                    className="text-orange-400 hover:text-gray-600"
                                   >
                                     {` `}
                                     View more posts{` `}
@@ -376,7 +376,7 @@ function PrimaryNav() {
                   </Link>
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-white hover:text-purple-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-600">
+                  <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-600 hover:text-purple-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-600">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -391,10 +391,10 @@ function PrimaryNav() {
                         href={item.href}
                         className="-m-3 flex items-center p-3 rounded-lg hover:bg-gray-50"
                       >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-purple-800 text-white sm:h-12 sm:w-12">
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-purple-800 text-gray-600 sm:h-12 sm:w-12">
                           <item.icon className="h-6 w-6" aria-hidden="true" />
                         </div>
-                        <div className="ml-4 text-base font-medium text-white">
+                        <div className="ml-4 text-base font-bold text-gray-600">
                           {item.name}
                         </div>
                       </a>
@@ -403,7 +403,7 @@ function PrimaryNav() {
                   <div className="mt-8 text-base">
                     <a
                       href="/"
-                      className="font-medium text-purple-600 hover:text-purple-600"
+                      className="font-bold text-purple-600 hover:text-purple-600"
                     >
                       {` `}
                       View all products <span aria-hidden="true">&rarr;</span>
@@ -416,42 +416,42 @@ function PrimaryNav() {
               <div className="grid grid-cols-2 gap-4">
                 <a
                   href="/"
-                  className="rounded-md text-base font-medium text-white hover:text-gray-700"
+                  className="rounded-md text-base font-bold text-gray-600 hover:text-gray-700"
                 >
                   Pricing
                 </a>
 
                 <a
                   href="/"
-                  className="rounded-md text-base font-medium text-white hover:text-gray-700"
+                  className="rounded-md text-base font-bold text-gray-600 hover:text-gray-700"
                 >
                   Docs
                 </a>
 
                 <a
                   href="/"
-                  className="rounded-md text-base font-medium text-white hover:text-gray-700"
+                  className="rounded-md text-base font-bold text-gray-600 hover:text-gray-700"
                 >
                   Company
                 </a>
 
                 <a
                   href="/"
-                  className="rounded-md text-base font-medium text-white hover:text-gray-700"
+                  className="rounded-md text-base font-bold text-gray-600 hover:text-gray-700"
                 >
                   Resources
                 </a>
 
                 <a
                   href="/"
-                  className="rounded-md text-base font-medium text-white hover:text-gray-700"
+                  className="rounded-md text-base font-bold text-gray-600 hover:text-gray-700"
                 >
                   Blog
                 </a>
 
                 <a
                   href="/"
-                  className="rounded-md text-base font-medium text-white hover:text-gray-700"
+                  className="rounded-md text-base font-bold text-gray-600 hover:text-gray-700"
                 >
                   Contact Sales
                 </a>

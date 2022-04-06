@@ -46,7 +46,7 @@ const components = {
   types: {
     mainImage: BodyImageComponent,
     code: ({ children, value }) => {
-      const language = value.language || `js`;
+      const language = value.language || `jsx`;
       const code = value.code || children;
       const highlightedLines = value.highlightedLines || [];
       return (

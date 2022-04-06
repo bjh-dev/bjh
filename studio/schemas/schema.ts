@@ -11,8 +11,12 @@ import siteSettings from './documents/siteSettings';
 import portfolio from './documents/portfolio';
 // Import Object type schemas
 import bodyPortableText from './objects/bodyPortableText';
+import codeSnippet from "./objects/codeSnippet";
+import sections from './objects/sections';
 import mainImage from './objects/mainImage';
 import seo from './objects/seo';
+import textSection from './objects/textSection';
+import textWithImageSection from './objects/textWithImageSection';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,7 +33,11 @@ export default createSchema({
     portfolio,
     /* Objects */
     bodyPortableText,
+    codeSnippet,
+    textSection,
+    textWithImageSection,
     mainImage,
+    sections,
     seo,
   ]),
 });

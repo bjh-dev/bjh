@@ -30,6 +30,7 @@
     "prettier/prettier": "error",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
+    "react/require-default-props": "off", // Since we do not use prop-types
     "react/jsx-filename-extension": "off",
     "react/jsx-props-no-spreading": "off",
     "import/no-extraneous-dependencies": [

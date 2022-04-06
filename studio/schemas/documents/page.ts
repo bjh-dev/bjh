@@ -27,9 +27,9 @@ export default {
       of: [{ type: "block" }],
     },
     {
-      name: "body",
-      title: "body",
-      type: "bodyPortableText",
+      name: "sections",
+      title: "Sections",
+      type: "sections"
     },
   ],
 };
